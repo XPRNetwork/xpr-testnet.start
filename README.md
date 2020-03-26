@@ -225,16 +225,16 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 
 # 5. Usefull Information  
   
-# Proton Faucet - get free XPT tokens:  
+# Proton Faucet - get free XPR tokens:  
   https://monitor.testnet.protonchain.com/#faucet  
 
 # Other Tools/Examples  
 
 - Cleos commands:  
 
-Send XPT
+Send XPR
 ```
-./cleos.sh transfer <your account> <receiver account> "1.0000 XPT" "test memo text"
+./cleos.sh transfer <your account> <receiver account> "1.0000 XPR" "test memo text"
 ```
 Get Balance  
 ```
