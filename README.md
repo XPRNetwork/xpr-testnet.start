@@ -275,6 +275,16 @@ https://testnet.protonchain.com/v2/docs
 **Permissions Portal**    
 https://permission.testnet.protonchain.com/    
 
+**LightAPI and State Track API**
+here are all SimpleAssets and dGoods belonging to Jacob:
+```
+curl 'https://strack-dev.xeos.me/strack/tokens?network=protontest&account=jacob'
+```
+
+Here are all fungible tokens for the same user:
+```
+curl 'https://testnet-lightapi.eosams.xeos.me/api/account/protontest/jacob'
+```
 --------------  
 
 # Backups
