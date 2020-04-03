@@ -1,7 +1,7 @@
 # Welcome to the PROTON Testnet [manual node installation]
 
-Chain ID: e0a0743522e90db0a1802632b90fc48272957f9c32e4d35639d769546c10b763  
-Based on tag: v2.0.3  
+Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
+Based on tag: v2.0.4  
 
 Please join out PROTON Testnet <a target="_blank" href="https://t.me/">Telegram channel</a>  
 Network Monitor: https://monitor.testnet.protonchain.com/  
