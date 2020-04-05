@@ -20,7 +20,7 @@ p2p-peer-address = proton-bp.dmail.co:7676
 
 ! This repo is for manual installation.  
 
-**Proton is a protocol built on top of the EOSIO consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions.
+**Proton is a protocol built on top of the EOSIO consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
 
 To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
 
