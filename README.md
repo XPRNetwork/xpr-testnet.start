@@ -59,7 +59,7 @@ ln -sf /opt/bin/v2.0.3 /opt/bin/bin
 So /opt/bin/bin will point to latest binaries  
 
 
-# 1.2 EOSIO - installing from precompiled binaries  
+# 1.2 Installing from precompiled binaries  
 
 A. Download the latest version of EOSIO for your OS from:  
 https://github.com/EOSIO/eos/releases/tag/v2.0.3   
@@ -83,7 +83,7 @@ B. Copy binaries to keep old versions and make sym link to latest:
 So /opt/bin/bin will be point to latest binaries  
 
 ---------------------------------------------------------  
-# 2. Update EOSIO software to new version  
+# 2. Update software to new version  
 
 # 2.1 Update sources  
 
