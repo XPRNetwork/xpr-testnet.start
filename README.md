@@ -24,10 +24,10 @@ p2p-peer-address = proton-bp.dmail.co:7676
 
 To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
 
-# 1. Installing EOSIO  
+# 1. Installing  
 ---------------------------------------------------  
 
-# 1.1 EOSIO - Installing from sources  
+# 1.1 Installing from sources  
 
 A. Create folder, download sources, compile and install:  
 
