@@ -16,6 +16,7 @@ p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
 p2p-peer-address = testnet.proton.eosdetroit.io:1337
 p2p-peer-address = proton-bp.dmail.co:7676
 p2p-peer-address = test.proton.eosusa.news:19889
+p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 
 ```
 
@@ -268,7 +269,8 @@ List staked/delegated
 # 6. Usefull Links
 
 **Hyperion History**  
-https://testnet.protonchain.com/v2/docs
+https://testnet.protonchain.com/v2/docs  
+https://proton-testnet-hyperion.eoscafeblock.com/v2/docs
     
 **Block Explorers**   
  https://proton-test.bloks.io   
