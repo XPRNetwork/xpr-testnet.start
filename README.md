@@ -144,8 +144,7 @@ To upgrade precompiled installation pleasse folow the same steps as in 1.2 (Inst
   signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE  
   - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node) 
 
-- To register as Block Producer you should go to the <a target="_blank" href="https://permission.testnet.protonchain.com/">Permission Portal</a> login and request permission to regproduse  
-  when you got this permission then run command    
+- To register as Block Producer, run command    :
   ```
   ./cleos.sh system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
@@ -190,10 +189,6 @@ Enter your private key
 
 Check if you can access you node using link http://you_server:8888/v1/chain/get_info (<a href="https://testnet.protonchain.com/v1/chain/get_info" target="_blank">Example</a>)  
 
-#### Run command below to get Contract Permissions    
-  ```
-  cleos -u https://testnet.protonchain.com push action eosio.proton dappreg '["youraccount"]' -p youraccount
-  ```
 
 ==============================================================================================  
 
@@ -273,10 +268,7 @@ https://testnet.protonchain.com/v2/docs
 https://proton-testnet-hyperion.eoscafeblock.com/v2/docs
     
 **Block Explorers**   
- https://proton-test.bloks.io   
-
-**Permissions Portal**    
-https://permission.testnet.protonchain.com/    
+ https://proton-test.bloks.io    
 
 **LightAPI and State Track API**
 here are all SimpleAssets and dGoods belonging to Jacob:
