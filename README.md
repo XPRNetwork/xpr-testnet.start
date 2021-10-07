@@ -9,7 +9,7 @@ Network Monitor: https://monitor.testnet.protonchain.com/
 P2P endpoints:
 ```
 p2p-peer-address = testnet.protonchain.com:9876
-p2p-peer-address = proton-testnet.eosphere.io:9830
+p2p-peer-address = peer1-proton-testnet.eosphere.io:9876
 p2p-peer-address = peer.protontest.alohaeos.com:9876
 p2p-peer-address = protontestnet.greymass.com:59876
 p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
