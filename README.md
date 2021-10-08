@@ -17,6 +17,7 @@ p2p-peer-address = testnet.proton.eosdetroit.io:1337
 p2p-peer-address = proton-bp.dmail.co:7676
 p2p-peer-address = test.proton.eosusa.news:19889
 p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
+p2p-peer-address = proton-testnet.eosio.cr:9878
 
 ```
 
