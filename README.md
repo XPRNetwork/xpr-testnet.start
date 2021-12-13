@@ -5,6 +5,7 @@ Based on tag: v2.0.7
 
 Please join our <a target="_blank" href="https://t.me/ProtonTestnet/">PROTON Testnet Telegram channel</a>  
 Network Monitor: https://monitor.testnet.protonchain.com/  
+API endpoints: https://proton-testnet.eosio.online/endpoints
 
 P2P endpoints:
 ```
@@ -24,7 +25,7 @@ p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 
 **Proton is a protocol built on top of the EOSIO consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
 
-To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
+To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from pre-compiled binaries:  
 
 # 1. Installing  
 ---------------------------------------------------  
@@ -61,7 +62,7 @@ ln -sf /opt/bin/v2.0.7 /opt/bin/bin
 So /opt/bin/bin will point to latest binaries  
 
 
-# 1.2 Installing from precompiled binaries  
+# 1.2 Installing from pre-compiled binaries  
 
 A. Download the latest version of EOSIO for your OS from:  
 https://github.com/EOSIO/eos/releases/tag/v2.0.7   
@@ -205,7 +206,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    tar xzvf state-latest.tar.gz -C .
    ```
    You got two folders block and state.  
-   Ater that go to **NODE** folder, and remove files from folder blocks and state
+   After that go to **NODE** folder, and remove files from folder blocks and state
    ```
    cd /opt/ProtonTestnet/protonNode
    rm blocks/*
@@ -233,7 +234,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    ```
 
 
-# 5. Usefull Information  
+# 5. Useful Information  
   
 # Proton Faucet - get free XPR tokens:  
   https://monitor.testnet.protonchain.com/#faucet  
@@ -263,6 +264,10 @@ List staked/delegated
  
 # 6. Usefull Links
 
+**Network Monitors**
+https://monitor.testnet.protonchain.com/
+https://proton-testnet.eosio.online 
+
 **Hyperion History**  
 https://testnet.protonchain.com/v2/docs  
 https://proton-testnet-hyperion.eoscafeblock.com/v2/docs
@@ -284,7 +289,8 @@ curl 'https://testnet-lightapi.eosams.xeos.me/api/account/protontest/jacob'
 
 # Backups
 ### Full(blocks and states):
-  * [Ubuntu 18](http://backup.cryptolions.io/ProtonTestNet/ubuntu18/)  
+  * [Ubuntu 18](http://backup.cryptolions.io/ProtonTestNet/ubuntu18/)
+  * [Ubuntu 18](https://archive.eosio.cr/)  
   
 ### Snapshot:
   * [Snapshots](http://backup.cryptolions.io/ProtonTestNet/snapshots/)
