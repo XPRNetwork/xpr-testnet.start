@@ -225,9 +225,13 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    Download latest snapshot from http://backup.cryptolions.io/ProtonTestNet/snapshots/ to snapshots folder in your **NODE** directory
    ```
    cd /opt/ProtonTestnet/protonNode/snapshots/
-   wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin
+   wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
    ```
-   after it downloaded run `start.sh` script with option `--snapshot` and snapshot file path
+   snapshot is compressed by zstd, so before use it uncompress
+   ```
+   zstd -d latest-snapshot.bin.zst
+   ```
+   after it run `start.sh` script with option `--snapshot` and snapshot file path
    ```
    cd /opt/ProtonTestnet/protonNode
    ./start.sh --snapshot /opt/ProtonTestnet/protonNode/snapshots/latest-snapshot.bin
