@@ -3,7 +3,7 @@
 # Updated by Paul Grey
 ################################################################################
 
-NODEOSBINDIR="/opt/bin"
+NODEOSBINDIR="/usr/bin"
 DATADIR="/opt/ProtonTestnet/protonNode"
 
 $DATADIR/stop.sh
