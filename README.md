@@ -1,7 +1,7 @@
 # Welcome to the PROTON Testnet [manual node installation]
 
 Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
-Based on tag: v2.1.0  
+Based on tag: v4.0.4
 
 Please join our <a target="_blank" href="https://t.me/ProtonTestnet/">PROTON Testnet Telegram channel</a>  
 Network Monitor: https://monitor.testnet.protonchain.com/  
@@ -21,97 +21,47 @@ p2p-peer-address = proton-testnet.eosio.cr:9878
 
 ```
 
-! This repo is for manual installation.  
+! This repo is for binary installation.  
 
-**Proton is a protocol built on top of the EOSIO consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
+**Proton is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
+
+To start a Proton node you need install Leap software. You can compile from sources or install from precompiled binaries:  
+
+## Important Update
+
+Proton Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 August 2023. This update is required to ensure the stability of the Proton Testnet.
+
+Please contact us on Telegram if you have any questions: https://t.me/ProtonTestnet
 
 To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
 
 # 1. Installing  
 ---------------------------------------------------  
 
-# 1.1 Installing from sources  
+Make sure you have Ubuntu 22.04 installed.
 
-A. Create folder, download sources, compile and install:  
+# 1 Installing from precompiled binaries  
 
-```
-mkdir /opt/EOSIO  
-cd /opt/EOSIO  
+A. Download the latest version of Antelope Leap for your OS from:  
+[https://github.com/AntelopeIO/leap/releases/tag/v4.0.4
+](https://github.com/AntelopeIO/leap/releases/tag/v4.0.4)
 
-git clone https://github.com/eosio/eos --recursive    
-cd eos  
-
-git checkout v2.1.0  
-git submodule update --init --recursive   
-
-./scripts/eosio_build.sh -P -y
-./scripts/eosio_install.sh
-```  
-
-B. Copy binaries to keep old versions and make sym link to latest:  
-
-```
-mkdir /opt/bin
-mkdir /opt/bin/v2.1.0
-cp /opt/EOSIO/eos/build/programs/nodeos/nodeos /opt/bin/v2.1.0/
-cp /opt/EOSIO/eos/build/programs/cleos/cleos /opt/bin/v2.1.0/
-cp /opt/EOSIO/eos/build/programs/keosd/keosd /opt/bin/v2.1.0/
-ln -sf /opt/bin/v2.1.0 /opt/bin/bin
-```
-
-So /opt/bin/bin will point to latest binaries  
-
-
-# 1.2 Installing from precompiled binaries  
-
-A. Download the latest version of EOSIO for your OS from:  
-https://github.com/EOSIO/eos/releases/tag/v2.1.0   
-For example, for ubuntu 18.04 you need to download deb eosio_2.1.0-1-ubuntu-18.04_amd64.deb              
+For example, for Ubuntu 22.04 you need to download deb leap_4.0.4-ubuntu22.04_amd64.deb            
 To install it you can use apt:  
 ```
-apt install ./eosio_2.1.0-1-ubuntu-18.04_amd64.deb   
+apt install ./leap_4.0.4-ubuntu22.04_amd64.deb 
 ```
-It will download all dependencies and install EOSIO to /usr/opt/eosio/v2.1.0  
-B. Copy binaries to keep old versions and make sym link to latest:  
-
-```
- mkdir /opt/bin
- mkdir /opt/bin/v2.1.0
- cp /usr/opt/eosio/v2.1.0/bin/nodeos /opt/bin/v2.1.0/
- cp /usr/opt/eosio/v2.1.0/bin/cleos /opt/bin/v2.1.0/
- cp /usr/opt/eosio/v2.1.0/bin/keosd /opt/bin/v2.1.0/
- ln -sf /opt/bin/v2.1.0/ /opt/bin/bin
-```
-
-So /opt/bin/bin will be point to latest binaries  
+It will download all dependencies and install Leap  
 
 ---------------------------------------------------------  
 # 2. Update software to new version  
 
-# 2.1 Update sources  
+If upgrading from old 2.X or 3.X versions please see this important guide 
+https://eosnetwork.com/blog/leap-3-1-upgrade-guide/
 
 ```
-cd /opt/EOSIO/eos
-git checkout -f
-git branch -f
-git pull
-git checkout v2.1.0   
-git submodule update --init --recursive   
-
-
-./scripts/eosio_uninstall.sh    
-./scripts/eosio_build.sh -P -y    
-
-
-mkdir /opt/bin/v2.1.0
-cp /opt/EOSIO/eos/build/programs/nodeos/nodeos /opt/bin/v2.1.0/
-cp /opt/EOSIO/eos/build/programs/cleos/cleos /opt/bin/v2.1.0/
-cp /opt/EOSIO/eos/build/programs/keosd/keosd /opt/bin/v2.1.0/
-ln -sf /opt/bin/v2.1.0 /opt/bin/bin
-```  
-
-# 2.2 Update binaries  
-To upgrade precompiled installation pleasse folow the same steps as in 1.2 (Installation from precompiled)  
+apt install ./leap_4.0.4-ubuntu22.04_amd64.deb 
+```
 
 ------------------------------------------------------------------  
 
