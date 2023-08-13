@@ -1,16 +1,9 @@
 #!/bin/bash
 ################################################################################
-# Proton tools 
-#
-# Created by CryptoLions.io
-#
-# https://github.com/needly/lynx-testnet.start 
-# 
-#
-###############################################################################
+# Updated by Paul Grey
+################################################################################
 
-
-NODEOSBINDIR="/opt/bin/bin"
+NODEOSBINDIR="/opt/bin"
 DATADIR="/opt/ProtonTestnet/protonNode"
 
 $DATADIR/stop.sh
