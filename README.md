@@ -18,10 +18,12 @@ p2p-peer-address = proton-bp.dmail.co:7676
 p2p-peer-address = test.proton.eosusa.news:19889
 p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 p2p-peer-address = proton-testnet.eosio.cr:9878
+p2p-peer-address = p2p.alvosec.com:9876
+p2p-peer-address = p2p-protonmain.saltant.io:9876
 
 ```
 
-! This repo is for binary installation.  
+This repo is for binary installation!
 
 **Proton is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
 
@@ -40,15 +42,16 @@ To start a Proton TestNet node you need install EOSIO software. You can compile 
 
 Make sure you have Ubuntu 22.04 installed.
 
-# 1 Installing from precompiled binaries  
+# 1 Installing from precompiled binaries
 
-A. Download the latest version of Antelope Leap for your OS from:  
+A. Download the latest version of Antelope Leap for your OS from:
 [https://github.com/AntelopeIO/leap/releases/tag/v4.0.4
 ](https://github.com/AntelopeIO/leap/releases/tag/v4.0.4)
 
 For example, for Ubuntu 22.04 you need to download deb leap_4.0.4-ubuntu22.04_amd64.deb            
-To install it you can use apt:  
+To install it you can use apt, but before that download it using wget command:
 ```
+wget https://github.com/AntelopeIO/leap/releases/download/v4.0.4/leap_4.0.4-ubuntu22.04_amd64.deb
 apt install ./leap_4.0.4-ubuntu22.04_amd64.deb 
 ```
 It will download all dependencies and install Leap  
@@ -85,7 +88,7 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 - If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
   
 - Edit config.ini:  
-  - server address: p2p-server-address = ENRT_YOUR_NODE_EXTERNAL_IP_ADDRESS:9876  
+  - server address: p2p-server-address = ENTER_YOUR_NODE_EXTERNAL_IP_ADDRESS:9876  
   - replace p2p-peer-address list with fresh generated on monitor site: https://monitor.testnet.protonchain.com/#p2p  
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM:  
     chain-state-db-size-mb = 16384  
@@ -219,7 +222,7 @@ https://testnet.protonchain.com/v2/docs
 https://proton-testnet-hyperion.eoscafeblock.com/v2/docs
     
 **Block Explorers**   
- https://proton-test.bloks.io    
+ https://testnet.protonscan.io
 
 **LightAPI and State Track API**
 here are all SimpleAssets and dGoods belonging to Jacob:
