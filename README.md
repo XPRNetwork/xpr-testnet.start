@@ -20,6 +20,7 @@ p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 p2p-peer-address = proton-testnet.eosio.cr:9878
 p2p-peer-address = p2p.alvosec.com:9876
 p2p-peer-address = p2p-protonmain.saltant.io:9876
+p2p-peer-address = protontest.eu.eosamsterdam.net:9905
 
 ```
 
