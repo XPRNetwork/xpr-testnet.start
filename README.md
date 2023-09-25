@@ -3,8 +3,8 @@
 Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Based on tag: v4.0.4
 
-Please join our <a target="_blank" href="https://t.me/XPRNetwork/935112">PROTON Testnet Telegram channel</a>  
-Network Monitor: https://monitor.testnet.protonchain.com/  
+Please join our [XPR Network Testnet Telegram channel](https://t.me/XPRNetwork/935112)
+Testnet Explorer: https://testnet.explorer.xprnetwor.org/
 
 P2P endpoints:
 ```
