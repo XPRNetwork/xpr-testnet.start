@@ -26,17 +26,17 @@ p2p-peer-address = protontest.eu.eosamsterdam.net:9905
 
 This repo is for binary installation!
 
-**Proton is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
+**XPR Network is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
 
-To start a Proton node you need install Leap software. You can compile from sources or install from precompiled binaries:  
+To start a XPR Network node you need install Leap software. You can compile from sources or install from precompiled binaries:  
 
 ## Important Update
 
-Proton Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 August 2023. This update is required to ensure the stability of the Proton Testnet.
+XPR Network Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 August 2023. This update is required to ensure the stability of the XPR Network Testnet.
 
 Please contact us on Telegram if you have any questions: https://t.me/ProtonTestnet
 
-To start a Proton TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
+To start a XPR Network TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
 
 # 1. Installing  
 ---------------------------------------------------  
@@ -80,7 +80,7 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 
 - In case you use a different data-dir folders -> edit all paths in files cleos.sh, start.sh, stop.sh, config.ini, Wallet/start_wallet.sh, Wallet/stop_wallet.sh  
 
--  to create an account on Proton test network go to <a target="_blank" href="https://monitor.testnet.protonchain.com/">monitor</a>  
+-  to create an account on XPR Network test network go to <a target="_blank" href="https://monitor.testnet.protonchain.com/">monitor</a>  
   Click <a target="_blank" href="https://monitor.testnet.protonchain.com/#createKey">“Create Keypair”</a> button located at the top left of the page, copy and save both public and private key.
   also you can create key pair using cleos command  
   `./cleos.sh create key`  
@@ -190,7 +190,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 
 # 5. Usefull Information  
   
-# Proton Faucet - get free XPR tokens:  
+# XPR Network Faucet - get free XPR tokens:  
   https://monitor.testnet.protonchain.com/#faucet  
 
 # Other Tools/Examples  
