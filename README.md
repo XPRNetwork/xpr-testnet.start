@@ -158,7 +158,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 # 5. Usefull Information  
   
 # XPR Network Faucet - get free XPR tokens:  
-  [https://monitor.testnet.protonchain.com/#faucet](https://testnet.resources.xprnetwork.org/)  
+  [https://testnet.resources.xprnetwork.org/faucet](https://testnet.resources.xprnetwork.org/faucet)  
 
 # Other Tools/Examples  
 
