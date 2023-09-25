@@ -69,7 +69,7 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 
 ------------------------------------------------------------------  
 
-# 3. Install PROTON Testnet node [manual]  
+# 3. Install XPR Network Testnet node [manual]  
     
 ```
     mkdir /opt/ProtonTestnet
@@ -80,17 +80,16 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 
 - In case you use a different data-dir folders -> edit all paths in files cleos.sh, start.sh, stop.sh, config.ini, Wallet/start_wallet.sh, Wallet/stop_wallet.sh  
 
--  to create an account on XPR Network test network go to <a target="_blank" href="https://monitor.testnet.protonchain.com/">monitor</a>  
-  Click <a target="_blank" href="https://monitor.testnet.protonchain.com/#createKey">“Create Keypair”</a> button located at the top left of the page, copy and save both public and private key.
+-  to create an account on XPR Network test network go to <a target="_blank" href="https://testnet.webauth.com/">testnet.WebAuth.com</a> create your account, use 000000 for the email activation code. You can get your private key by going to settings > backup private key.
+  
   also you can create key pair using cleos command  
   `./cleos.sh create key`  
-  next Click <a target="_blank" href="https://monitor.testnet.protonchain.com/#account">“Create Account”</a> at the top left of the page, enter an account name, submit your previously saved public key in both Owner and Active Public Key field, complete the captcha, and hit create.
-  
+
 - If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
   
 - Edit config.ini:  
   - server address: p2p-server-address = ENTER_YOUR_NODE_EXTERNAL_IP_ADDRESS:9876  
-  - replace p2p-peer-address list with fresh generated on monitor site: https://monitor.testnet.protonchain.com/#p2p  
+  - replace p2p-peer-address list from above in P2P list  
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM:  
     chain-state-db-size-mb = 16384  
 
@@ -99,11 +98,10 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
   signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE  
   - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node) 
 
-- To register as Block Producer, run command    :
+- To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
   ```
   ./cleos.sh system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
-  
 
 - Open TCP Ports (8888, 9876) on your firewall/router  
 
@@ -139,7 +137,6 @@ enter the wallet password.
 ./cleos.sh wallet import
 ```
 Enter your private key  
-
 
 
 Check if you can access you node using link http://you_server:8888/v1/chain/get_info (<a href="https://testnet.protonchain.com/v1/chain/get_info" target="_blank">Example</a>)  
@@ -191,7 +188,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 # 5. Usefull Information  
   
 # XPR Network Faucet - get free XPR tokens:  
-  https://monitor.testnet.protonchain.com/#faucet  
+  [https://monitor.testnet.protonchain.com/#faucet](https://testnet.resources.xprnetwork.org/)  
 
 # Other Tools/Examples  
 
@@ -217,31 +214,14 @@ List staked/delegated
 ```
  
 # 6. Usefull Links
-
-**Hyperion History**  
-https://testnet.protonchain.com/v2/docs  
-https://proton-testnet-hyperion.eoscafeblock.com/v2/docs
     
 **Block Explorers**   
- https://testnet.protonscan.io
+ https://testnet.explorer.xprnetwork.org
 
-**LightAPI and State Track API**
-here are all SimpleAssets and dGoods belonging to Jacob:
-```
-curl 'https://strack-dev.xeos.me/strack/tokens?network=protontest&account=jacob'
-```
-
-Here are all fungible tokens for the same user:
-```
-curl 'https://testnet-lightapi.eosams.xeos.me/api/account/protontest/jacob'
-```
---------------  
 
 # Backups
-### Full(blocks and states):
-  * [Ubuntu 18](http://backup.cryptolions.io/ProtonTestNet/ubuntu18/)  
   
 ### Snapshot:
-  * [Snapshots](http://backup.cryptolions.io/ProtonTestNet/snapshots/)
+  * [Snapshots](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
 
 --------------
