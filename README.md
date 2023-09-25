@@ -1,9 +1,9 @@
-# Welcome to the PROTON Testnet [manual node installation]
+# Welcome to the XPR Network Testnet [manual node installation]
 
 Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Based on tag: v4.0.4
 
-Please join our <a target="_blank" href="https://t.me/ProtonTestnet/">PROTON Testnet Telegram channel</a>  
+Please join our <a target="_blank" href="https://t.me/XPRNetwork/935112">PROTON Testnet Telegram channel</a>  
 Network Monitor: https://monitor.testnet.protonchain.com/  
 
 P2P endpoints:
@@ -34,7 +34,7 @@ To start a XPR Network node you need install Leap software. You can compile from
 
 XPR Network Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 August 2023. This update is required to ensure the stability of the XPR Network Testnet.
 
-Please contact us on Telegram if you have any questions: https://t.me/ProtonTestnet
+Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwork/935112](https://t.me/XPRNetwork/935112)
 
 To start a XPR Network TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
 
