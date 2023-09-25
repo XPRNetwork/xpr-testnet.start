@@ -4,7 +4,7 @@ Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Based on tag: v4.0.4
 
 Please join our [XPR Network Testnet Telegram channel](https://t.me/XPRNetwork/935112)
-Testnet Explorer: https://testnet.explorer.xprnetwor.org/
+Testnet Explorer: https://testnet.explorer.xprnetwork.org/
 
 P2P endpoints:
 ```
@@ -17,7 +17,7 @@ p2p-peer-address = test.proton.eosusa.news:19889
 p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 p2p-peer-address = proton-testnet.eosio.cr:9878
 p2p-peer-address = p2p.alvosec.com:9876
-p2p-peer-address = p2p-protonmain.saltant.io:9876
+p2p-peer-address = p2p-protontest.saltant.io:9879
 p2p-peer-address = protontest.eu.eosamsterdam.net:9905
 
 ```
