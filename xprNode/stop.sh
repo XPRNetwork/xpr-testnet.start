@@ -1,14 +1,6 @@
 #!/bin/bash
-################################################################################
-# Proton tools
-#
-# Created by CryptoLions.io
-#
-# https://github.com/needly/lynx-testnet.start
-#
-###############################################################################
 
-DIR="/opt/ProtonTestnet/protonNode"
+DIR="/opt/XPRTestnet/xprNode"
 
     if [ -f $DIR"/nodeos.pid" ]; then
 	pid=`cat $DIR"/nodeos.pid"`

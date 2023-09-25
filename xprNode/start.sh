@@ -1,10 +1,7 @@
 #!/bin/bash
-################################################################################
-# Updated by Paul Grey
-################################################################################
 
 NODEOSBINDIR="/usr/bin"
-DATADIR="/opt/ProtonTestnet/protonNode"
+DATADIR="/opt/XPRTestNet/xprNode"
 
 $DATADIR/stop.sh
 echo -e "Starting Nodeos \n";

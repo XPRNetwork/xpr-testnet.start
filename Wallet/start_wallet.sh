@@ -1,17 +1,7 @@
 #!/bin/bash
 
-################################################################################
-# Lynx tools
-#
-# 
-# Created by http://CryptoLions.io
-#
-# https://github.com/needly/lynx-testnet.start  
-#
-###############################################################################
-
-NODEOSBINDIR="/opt/ProtonTestnet/bin/bin"
-DATADIR="/opt/ProtonTestnet/Wallet"
+NODEOSBINDIR="/opt/XPRTestnet/bin/bin"
+DATADIR="/opt/XPRTestnet/Wallet"
 WALLET_HOST="127.0.0.1"
 WALLET_POSRT="3000"
 

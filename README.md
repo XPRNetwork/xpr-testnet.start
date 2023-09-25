@@ -8,10 +8,8 @@ Testnet Explorer: https://testnet.explorer.xprnetwor.org/
 
 P2P endpoints:
 ```
-p2p-peer-address = testnet.protonchain.com:9876
-p2p-peer-address = peer1-proton-testnet.eosphere.io:9876
-p2p-peer-address = peer.protontest.alohaeos.com:9876
-p2p-peer-address = protontestnet.greymass.com:59876
+p2p-peer-address = testnet.xprnetwork.org:9876
+p2p-peer-address = tn1.protonnz.com:9876
 p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
 p2p-peer-address = testnet.proton.eosdetroit.io:1337
 p2p-peer-address = proton-bp.dmail.co:7676
@@ -36,7 +34,7 @@ XPR Network Consortium is requesting all Block Producers to update their nodes t
 
 Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwork/935112](https://t.me/XPRNetwork/935112)
 
-To start a XPR Network TestNet node you need install EOSIO software. You can compile from sources or install from precompiled binaries:  
+To start a XPR Network TestNet node you need install Antelope Leap software. You can compile from sources or install from precompiled binaries:  
 
 # 1. Installing  
 ---------------------------------------------------  
@@ -72,9 +70,9 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 # 3. Install XPR Network Testnet node [manual]  
     
 ```
-    mkdir /opt/ProtonTestnet
-    cd /opt/ProtonTestnet
-    git clone https://github.com/ProtonProtocol/proton-testnet.start.git ./
+    mkdir /opt/XPRTestnet
+    cd /opt/XPRTestnet
+    git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
 
 ```
 
@@ -107,7 +105,7 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 
 - Start wallet, run  
 ```
-cd /opt/ProtonTestnet
+cd /opt/XPRTestnet
 ./Wallet/start_wallet.sh  
 ```
 
@@ -139,49 +137,21 @@ enter the wallet password.
 Enter your private key  
 
 
-Check if you can access you node using link http://you_server:8888/v1/chain/get_info (<a href="https://testnet.protonchain.com/v1/chain/get_info" target="_blank">Example</a>)  
+Check if you can access you node using link http://you_server:8888/v1/chain/get_info (<a href="https://testnet.xprnetwork.org/v1/chain/get_info" target="_blank">Example</a>)  
 
 
 ==============================================================================================  
 
-# 4.1 Restore/Start from Backup
-   Download latest block and state archive for your OS from http://backup.cryptolions.io/ProtonTestNet/
-   
-   ```
-   wget http://backup.cryptolions.io/ProtonTestNet/ubuntu18/latest-blocks.tar.gz
-   wget http://backup.cryptolions.io/ProtonTestNet/ubuntu18/latest-state.tar.gz
-   ```
-   After downloaded extract their
-   ```
-   tar xzvf blocks-latest.tar.gz -C .
-   tar xzvf state-latest.tar.gz -C .
-   ```
-   You got two folders block and state.  
-   Ater that go to **NODE** folder, and remove files from folder blocks and state
-   ```
-   cd /opt/ProtonTestnet/protonNode
-   rm blocks/*
-   rm state/*
-   ```
-   After that go where you extracted archive and move file from folder 
-   ```
-   mv ~/blocks/* /opt/ProtonTestnet/protonNode/blocks/
-   mv ~/state/* /opt/ProtonTestnet/protonNode/state/
-   ```
-   After files moved start your NODE
-   ```
-   ./start.sh
-   ```
-# 4.2 Restore/Start from Snapshots
+# 4. Restore/Start from Snapshots
    Download latest snapshot from http://backup.cryptolions.io/ProtonTestNet/snapshots/ to snapshots folder in your **NODE** directory
    ```
-   cd /opt/ProtonTestnet/protonNode/snapshots/
+   cd /opt/XPRTestnet/xprNode/snapshots/
    wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin
    ```
    after it downloaded run `start.sh` script with option `--snapshot` and snapshot file path
    ```
-   cd /opt/ProtonTestnet/protonNode
-   ./start.sh --snapshot /opt/ProtonTestnet/protonNode/snapshots/latest-snapshot.bin
+   cd /opt/XPRTestnet/protonNode
+   ./start.sh --snapshot /opt/XPRTestnet/protonNode/snapshots/latest-snapshot.bin
    ```
 
 
