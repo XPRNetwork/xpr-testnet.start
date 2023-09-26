@@ -1,4 +1,4 @@
-# Welcome to the XPR Network Testnet [manual node installation]
+# Welcome to the XPR Network Testnet [Validator Node Installation]
 
 Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Based on tag: v4.0.4
@@ -34,14 +34,12 @@ XPR Network Consortium is requesting all Block Producers to update their nodes t
 
 Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwork/935112](https://t.me/XPRNetwork/935112)
 
-To start a XPR Network TestNet node you need install Antelope Leap software. You can compile from sources or install from precompiled binaries:  
 
-# 1. Installing  
 ---------------------------------------------------  
 
 Make sure you have Ubuntu 22.04 installed.
 
-# 1 Installing from precompiled binaries
+# 1. Installing from precompiled binaries
 
 A. Download the latest version of Antelope Leap for your OS from:
 [https://github.com/AntelopeIO/leap/releases/tag/v4.0.4
