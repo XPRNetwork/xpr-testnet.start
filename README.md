@@ -70,8 +70,8 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 # 3. Install XPR Network Testnet node [manual]  
     
 ```
-    mkdir /opt/XPRTestnet
-    cd /opt/XPRTestnet
+    mkdir /opt/XPRTestNet
+    cd /opt/XPRTestNet
     git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
 
 ```
@@ -105,7 +105,7 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 
 - Start wallet, run  
 ```
-cd /opt/XPRTestnet
+cd /opt/XPRTestNet
 ./Wallet/start_wallet.sh  
 ```
 
@@ -145,13 +145,13 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 # 4. Restore/Start from Snapshots
    Download latest snapshot from http://backup.cryptolions.io/ProtonTestNet/snapshots/ to snapshots folder in your **NODE** directory
    ```
-   cd /opt/XPRTestnet/xprNode/snapshots/
+   cd /opt/XPRTestNet/xprNode/snapshots/
    wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin
    ```
    after it downloaded run `start.sh` script with option `--snapshot` and snapshot file path
    ```
-   cd /opt/XPRTestnet/protonNode
-   ./start.sh --snapshot /opt/XPRTestnet/protonNode/snapshots/latest-snapshot.bin
+   cd /opt/XPRTestNet/protonNode
+   ./start.sh --snapshot /opt/XPRTestNet/protonNode/snapshots/latest-snapshot.bin
    ```
 
 

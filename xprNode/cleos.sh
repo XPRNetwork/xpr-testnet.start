@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODEOSBINDIR="/opt/bin/bin"
+NODEOSBINDIR="/usr/bin"
 
 WALLETHOST="127.0.0.1"
 NODEHOST="127.0.0.1"

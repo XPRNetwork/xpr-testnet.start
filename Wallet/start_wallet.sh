@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NODEOSBINDIR="/opt/XPRTestnet/bin/bin"
-DATADIR="/opt/XPRTestnet/Wallet"
+NODEOSBINDIR="/opt/XPRTestNet/bin/bin"
+DATADIR="/opt/XPRTestNet/Wallet"
 WALLET_HOST="127.0.0.1"
 WALLET_POSRT="3000"
 

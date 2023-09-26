@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="/opt/XPRTestnet/xprNode"
+DIR="/opt/XPRTestNet/xprNode"
 
     if [ -f $DIR"/nodeos.pid" ]; then
 	pid=`cat $DIR"/nodeos.pid"`
