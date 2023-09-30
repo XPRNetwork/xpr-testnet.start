@@ -146,7 +146,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    cd /opt/XPRTestNet/xprNode/snapshots/
    wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin
    ```
-   after it downloaded you need to unzip, first install zstd package `studo apt install zstd`
+   after it downloaded you need to unzip, first install zstd package `sudo apt install zstd`
 
    unzip file with `unzstd latest-snapshot.bin.zst`   
    
