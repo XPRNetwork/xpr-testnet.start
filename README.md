@@ -113,6 +113,21 @@ cd /opt/XPRTestNet
 ```  
 Check logs stderr.txt if node is running ok. 
 
+>☝ Depending on your installation, you may experience issue with Keosd that not running (`is Keosd running ?`). That mean the keosd's path is not correct, edit the file in /opt/XPRTestNet/Wallet/start_wallet.sh to fix the path
+```
+nano /opt/XPRTestNet/Wallet/start_wallet.sh
+```
+Shoul open the follwing
+```
+#!/bin/bash
+
+NODEOSBINDIR="/opt/XPRTestNet/Wallet/bin/bin"
+DATADIR="/opt/XPRTestNet/Wallet"
+WALLET_HOST="127.0.0.1"
+WALLET_POSRT="3000"
+```
+Change the `NODEOSBINDIR` to `/usr/bin`, that shoud fix the problem (Thank to Andrey Salnikov)
+***
 
 - Create your wallet file  
 ```
