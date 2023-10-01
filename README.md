@@ -111,7 +111,12 @@ cd /opt/XPRTestNet
 ```
 ./start.sh --delete-all-blocks --genesis-json genesis.json
 ```  
-Check logs stderr.txt if node is running ok. 
+Check logs stderr.txt if node is running ok, we can follow the logs like so.
+
+```
+tail -f stderr.txt
+```
+Ctrl + C to exit 
 
 >☝ Depending on your installation, you may experience issue with Keosd that not running (`is Keosd running ?`). That mean the keosd's path is not correct, edit the file in /opt/XPRTestNet/Wallet/start_wallet.sh to fix the path
 ```
@@ -163,9 +168,17 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    ```
    after it downloaded you need to unzip, first install zstd package `sudo apt install zstd`
 
-   unzip file with `unzstd latest-snapshot.bin.zst`   
+   unzip file with `unzstd latest-snapshot.bin.zst`
+
+   before starting from snapshot make sure to delete /blocks and /state folders
+
+    ```
+    rm -rf blocks/
+    rm -rf state/
+    ```
    
    then `start.sh` script with option `--snapshot` and snapshot file path
+   
    ```
    cd /opt/XPRTestNet/xprNode
    ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
