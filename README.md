@@ -172,10 +172,10 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 
    before starting from snapshot make sure to delete /blocks and /state folders
 
-    ```
+    
     rm -rf blocks/
     rm -rf state/
-    ```
+    
    
    then `start.sh` script with option `--snapshot` and snapshot file path
    
