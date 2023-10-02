@@ -50,9 +50,9 @@ For example, for Ubuntu 22.04 you need to download deb leap_4.0.4-ubuntu22.04_am
 To install it you can use apt, but before that download it using wget command:
 ```
 wget https://github.com/AntelopeIO/leap/releases/download/v4.0.4/leap_4.0.4-ubuntu22.04_amd64.deb
-apt install ./leap_4.0.4-ubuntu22.04_amd64.deb 
+apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 ```
-It will download all dependencies and install Leap  
+It will download all dependencies and install Leap. 
 
 ---------------------------------------------------------  
 # 2. Update software to new version  
@@ -69,15 +69,14 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 # 3. Install XPR Network Testnet node [manual]  
     
 ```
-    mkdir /opt/XPRTestNet
-    cd /opt/XPRTestNet
-    git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
+mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
 
 ```
 
 - In case you use a different data-dir folders -> edit all paths in files cleos.sh, start.sh, stop.sh, config.ini, Wallet/start_wallet.sh, Wallet/stop_wallet.sh  
 
--  to create an account on XPR Network test network go to <a target="_blank" href="https://testnet.webauth.com/">testnet.WebAuth.com</a> create your account, use 000000 for the email activation code. You can get your private key by going to settings > backup private key.
+-  to create an account on XPR Network test network go to <a target="_blank" href="https://testnet.webauth.com/">testnet.webauth.com</a> create your account, use 000000 for the email activation code. You can get your private key by going to settings > backup private key.
+-  There is also an option to create account by using <a target="_blank" href="https://testnet.explorer.xprnetwork.org/wallet/create-account/advanced">Testnet Explorer</a>, only that here you will need to pay for ram fee (6.66 XPR).
   
   also you can create key pair using cleos command  
   `./cleos.sh create key`  
@@ -93,19 +92,20 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
   - if BP: your producer name: producer-name = YOUR_BP_NAME  
   - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action):  
   signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE  
-  - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node) 
+  - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node)
+    
+- Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/alvosec/urxr13">msig</a> (login with WebAuth or use cleos).
 
 - To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
   ```
-  ./cleos.sh system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
+  cleos system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
 
 - Open TCP Ports (8888, 9876) on your firewall/router  
 
 - Start wallet, run  
 ```
-cd /opt/XPRTestNet
-./Wallet/start_wallet.sh  
+cd /opt/XPRTestNet ; ./Wallet/start_wallet.sh 
 ```
 
 **First run should be with --delete-all-blocks and --genesis-json**  
@@ -123,7 +123,7 @@ Ctrl + C to exit
 ```
 nano /opt/XPRTestNet/Wallet/start_wallet.sh
 ```
-Shoul open the follwing
+If your `NODEOSBINDIR` has this dir:
 ```
 #!/bin/bash
 
@@ -137,21 +137,21 @@ Change the `NODEOSBINDIR` to `/usr/bin`, that shoud fix the problem (Thank to An
 
 - Create your wallet file  
 ```
-./cleos.sh wallet create --file pass.txt
+cleos wallet create --file pass.txt
 ```
 Your password will be in pass.txt it will be used when unlock wallet  
 
 
 - Unlock your wallet  
 ```
-./cleos.sh wallet unlock  
+cleos wallet unlock  
 ```
 enter the wallet password.  
 
 
 - Import your key  
 ```
-./cleos.sh wallet import
+cleos wallet import
 ```
 Enter your private key  
 
@@ -188,7 +188,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 
 # 5. Usefull Information  
   
-# XPR Network Faucet - get free XPR tokens:  
+  XPR Network Faucet - get free XPR tokens:  
   [https://testnet.resources.xprnetwork.org/faucet](https://testnet.resources.xprnetwork.org/faucet)  
 
 # Other Tools/Examples  
@@ -197,26 +197,26 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 
 Send XPR
 ```
-./cleos.sh transfer <your account> <receiver account> "1.0000 XPR" "test memo text"
+cleos transfer <your account> <receiver account> "1.0000 XPR" "test memo text"
 ```
 Get Balance  
 ```
-./cleos.sh get currency balance eosio.token <account name>
+cleos get currency balance eosio.token <account name>
 ```
 
 List registered producers (-l \<limit\>)  
 ```
-./cleos.sh get table eosio eosio producers -l 100  
+cleos get table eosio eosio producers -l 100  
 ```
 
 List staked/delegated  
 ```
-./cleos.sh system listbw <account>   
+cleos system listbw <account>   
 ```
  
 # 6. Usefull Links
     
-**Block Explorers**   
+**Block Explorers**
  https://testnet.explorer.xprnetwork.org
 
 
