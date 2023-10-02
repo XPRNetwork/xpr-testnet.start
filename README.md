@@ -70,7 +70,6 @@ apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
     
 ```
 mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
-
 ```
 
 - In case you use a different data-dir folders -> edit all paths in files cleos.sh, start.sh, stop.sh, config.ini, Wallet/start_wallet.sh, Wallet/stop_wallet.sh  
