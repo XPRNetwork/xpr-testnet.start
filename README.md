@@ -49,8 +49,7 @@ A. Download the latest version of Antelope Leap for your OS from:
 For example, for Ubuntu 22.04 you need to download deb leap_4.0.4-ubuntu22.04_amd64.deb            
 To install it you can use apt, but before that download it using wget command:
 ```
-wget https://github.com/AntelopeIO/leap/releases/download/v4.0.4/leap_4.0.4-ubuntu22.04_amd64.deb
-apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
+wget https://github.com/AntelopeIO/leap/releases/download/v4.0.4/leap_4.0.4-ubuntu22.04_amd64.deb && apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
 ```
 It will download all dependencies and install Leap. 
 
@@ -79,7 +78,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 -  There is also an option to create account by using <a target="_blank" href="https://testnet.explorer.xprnetwork.org/wallet/create-account/advanced">Testnet Explorer</a>, only that here you will need to pay for ram fee (6.66 XPR).
   
   also you can create key pair using cleos command  
-  `./cleos.sh create key`  
+  `cleos create key`  
 
 - If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
   
