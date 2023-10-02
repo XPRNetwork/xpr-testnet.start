@@ -16,7 +16,7 @@ p2p-peer-address = proton-bp.dmail.co:7676
 p2p-peer-address = test.proton.eosusa.news:19889
 p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
 p2p-peer-address = proton-testnet.edenia.cloud:9878
-p2p-peer-address = p2p.alvosec.com:9876
+p2p-peer-address = testnet-p2p.alvosec.com:9876
 p2p-peer-address = p2p-protontest.saltant.io:9879
 p2p-peer-address = protontest.eu.eosamsterdam.net:9905
 
@@ -30,6 +30,7 @@ To start a XPR Network node you need install Leap software. You can compile from
 
 ## Important Update
 
+> [!IMPORTANT]
 XPR Network Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 October 2023. This update is required to ensure the stability of the XPR Network TestNet.
 
 Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwork/935112](https://t.me/XPRNetwork/935112)
