@@ -1,15 +1,5 @@
 #!/bin/bash
 
-################################################################################
-# Lynx tools
-#
-# 
-# Created by http://CryptoLions.io
-#
-# https://github.com/needly/lynx-testnet.start 
-#
-###############################################################################
-
 DIR="/opt/ProtonTestnet/Wallet"
 
     if [ -f $DIR"/wallet.pid" ]; then
