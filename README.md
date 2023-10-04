@@ -88,7 +88,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
     chain-state-db-size-mb = 16384  
 
   - if BP: your producer name: producer-name = YOUR_BP_NAME  
-  - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action):  
+  - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action, use this command `cleos create key --to-console`, and enter PUB key PRIV key in signature-provider):  
   signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE  
   - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node)
     
