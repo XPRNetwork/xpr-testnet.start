@@ -82,15 +82,14 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 - If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
   
 - Edit config.ini:  
-  - server address: p2p-server-address = ENTER_YOUR_NODE_EXTERNAL_IP_ADDRESS:9876  
+  - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:9876`  
   - replace p2p-peer-address list from above in P2P list  
-  - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM:  
-    chain-state-db-size-mb = 16384  
+  - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM: `chain-state-db-size-mb = 16384`
 
-  - if BP: your producer name: producer-name = YOUR_BP_NAME  
+  - if BP: your producer name: `producer-name = YOUR_BP_NAME`
   - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action, use this command `cleos create key --to-console`, and enter PUB key PRIV key in signature-provider):  
-  signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE  
-  - if BP: comment out eos-vm-oc-enable and eos-vm-oc-compile-threads (EOSVM OC is not to be used on a block signing node)
+  `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
+  - if BP: comment out `eos-vm-oc-enable` and `eos-vm-oc-compile-threads` (EOSVM OC is not to be used on a block signing node)
     
 - Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/alvosec/urxr13">msig</a> (login with WebAuth or use cleos).
 
