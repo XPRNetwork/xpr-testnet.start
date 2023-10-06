@@ -19,7 +19,6 @@ p2p-peer-address = proton-testnet.edenia.cloud:9878
 p2p-peer-address = testnet-p2p.alvosec.com:9876
 p2p-peer-address = p2p-protontest.saltant.io:9879
 p2p-peer-address = protontest.eu.eosamsterdam.net:9905
-
 ```
 
 This repo is for binary installation!
@@ -38,7 +37,7 @@ Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwor
 
 ---------------------------------------------------  
 
-Make sure you have Ubuntu 22.04 installed.
+Make sure you have Ubuntu 22.04 installed. (Check OS version by using this command `lsb_release -a`)
 
 # 1. Installing from precompiled binaries
 
@@ -90,6 +89,8 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
   - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action, use this command `cleos create key --to-console`, and enter PUB key PRIV key in signature-provider):  
   `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
   - if BP: comment out `eos-vm-oc-enable` and `eos-vm-oc-compile-threads` (EOSVM OC is not to be used on a block signing node)
+  - set CPU governor to performance, first check current CPU governor by using this command `cpufreq-info` and then set to performance `sudo cpufreq-set -r -g performance`
+  - use this command to watch current CPU clock speed `watch -n 0.4 "grep -E '^cpu MHz' /proc/cpuinfo"`
     
 - Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/alvosec/urxr13">msig</a> (login with WebAuth or use cleos).
 
@@ -114,7 +115,7 @@ Check logs stderr.txt if node is running ok, we can follow the logs like so.
 ```
 tail -f stderr.txt
 ```
-Ctrl + C to exit 
+Ctrl + C to exit
 
 >☝ Depending on your installation, you may experience issue with Keosd that not running (`is Keosd running ?`). That mean the keosd's path is not correct, edit the file in /opt/XPRTestNet/Wallet/start_wallet.sh to fix the path
 ```
@@ -161,25 +162,21 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 # 4. Restore/Start from Snapshots
    Download latest snapshot from http://backup.cryptolions.io/ProtonTestNet/snapshots/ to snapshots folder in your **NODE** directory
    ```
-   cd /opt/XPRTestNet/xprNode/snapshots/
-   wget https://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
+   cd /opt/XPRTestNet/xprNode/snapshots/ && wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
    ```
    after it downloaded you need to unzip, first install zstd package `sudo apt install zstd`
 
    unzip file with `unzstd latest-snapshot.bin.zst`
 
    before starting from snapshot make sure to delete /blocks and /state folders
-
     
     rm -rf blocks/
     rm -rf state/
     
-   
-   then `start.sh` script with option `--snapshot` and snapshot file path
+   then `start.sh` script with option `--snapshot` and snapshot file path (check where you downloaded snapshot)
    
    ```
-   cd /opt/XPRTestNet/xprNode
-   ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
+   cd /opt/XPRTestNet/xprNode && ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
    ```
 
 
@@ -210,7 +207,11 @@ List staked/delegated
 ```
 cleos system listbw <account>   
 ```
- 
+Check account information
+```
+cleos get account <account-name>
+```
+
 # 6. Usefull Links
     
 **Block Explorers**
