@@ -222,11 +222,13 @@ cleos get account <account-name>
   
 ### Snapshot:
   * [Snapshots](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
-  * https://testnet.app.metalx.com/swap
-  * https://testnet.explorer.xprnetwork.org/
-  * https://testnet.resources.xprnetwork.org/faucet
-  * https://testnet.lending.metalx.com/
-  * https://testnet.webauth.com/
+
+### TestNet Links:
+  * [WebAuth TestNet](https://testnet.webauth.com/)
+  * [Metal X TestNet](https://testnet.app.metalx.com/swap)
+  * [XPR Explorer TestNet](https://testnet.explorer.xprnetwork.org/)
+  * [XPR Resources TestNet](https://testnet.resources.xprnetwork.org/faucet)
+  * [Metal X Lending TestNet](https://testnet.lending.metalx.com/)
 
 
 --------------
