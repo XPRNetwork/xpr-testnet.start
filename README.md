@@ -214,21 +214,17 @@ cleos get account <account-name>
 
 # 6. Usefull Links
     
-**Block Explorers**
- https://testnet.explorer.xprnetwork.org
-
+  * [WebAuth TestNet](https://testnet.webauth.com/)
+  * [Metal X TestNet](https://testnet.app.metalx.com/swap)
+  * [XPR Explorer TestNet](https://testnet.explorer.xprnetwork.org/)
+  * [XPR Resources TestNet](https://testnet.resources.xprnetwork.org/faucet)
+  * [Metal X Lending TestNet](https://testnet.lending.metalx.com/)
 
 # Backups
   
 ### Snapshot:
   * [Snapshots](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
 
-### TestNet Links:
-  * [WebAuth TestNet](https://testnet.webauth.com/)
-  * [Metal X TestNet](https://testnet.app.metalx.com/swap)
-  * [XPR Explorer TestNet](https://testnet.explorer.xprnetwork.org/)
-  * [XPR Resources TestNet](https://testnet.resources.xprnetwork.org/faucet)
-  * [Metal X Lending TestNet](https://testnet.lending.metalx.com/)
 
 
 --------------
