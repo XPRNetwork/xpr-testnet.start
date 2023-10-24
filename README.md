@@ -75,10 +75,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 
 -  to create an account on XPR Network test network go to <a target="_blank" href="https://testnet.webauth.com/">testnet.webauth.com</a> create your account, use 000000 for the email activation code. You can get your private key by going to settings > backup private key.
 -  There is also an option to create account by using <a target="_blank" href="https://testnet.explorer.xprnetwork.org/wallet/create-account/advanced">Testnet Explorer</a>, only that here you will need to pay for ram fee (6.66 XPR).
-  
-  also you can create key pair using cleos command `cleos create key`  
-
-- If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
+- If non BP node: use the same config, just comment out rows with `producer-name` and `signature-provider` 
   
 - Edit config.ini:  
   - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:9876`  
@@ -86,18 +83,18 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM: `chain-state-db-size-mb = 16384`
 
   - if BP: your producer name: `producer-name = YOUR_BP_NAME`
-  - if BP: add producer keypair for signing blocks (this pub key should be used in regproducer action, use this command `cleos create key --to-console`, and enter PUB key PRIV key in signature-provider):  
-  `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
+  - if BP: generate a key pair for signing blocks (use the public key generated with the `cleos create key --to-console` command). Then, add this public key and its corresponding private key to the signature provider. Ensure that this key is not linked to your account keys and should be used exclusively for the regproducer action: `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
   - if BP: comment out `eos-vm-oc-enable` and `eos-vm-oc-compile-threads` (EOSVM OC is not to be used on a block signing node)
   - set CPU governor to performance, first check current CPU governor by using this command `cpufreq-info` and then set to performance `sudo cpufreq-set -r -g performance`
   - use this command to watch current CPU clock speed `watch -n 0.4 "grep -E '^cpu MHz' /proc/cpuinfo"`
     
-- Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/alvosec/urxr13">msig</a> (login with WebAuth or use cleos).
+  - Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/testalvosec/vveaah">msig</a> (login with WebAuth or use cleos).
 
-- To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
+  - To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112):
   ```
   cleos system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
+  In this step, please provide your registered BP account, the public key you've included in the `signature-provider`, and specify the location using the ISO code for your country. You can find the ISO code for your country [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
 - Open TCP Ports (8888, 9876) on your firewall/router  
 
