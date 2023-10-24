@@ -83,15 +83,14 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM: `chain-state-db-size-mb = 16384`
 
   - if BP: your producer name: `producer-name = YOUR_BP_NAME`
-  - if BP: generate a key pair for signing blocks (use the public key generated with the `cleos create key --to-console` command). Then, add this public key and its corresponding private key to the signature provider. Ensure that this key is not linked to your account keys and should be used exclusively for the regproducer action.
-  `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
+  - if BP: generate a key pair for signing blocks (use the public key generated with the `cleos create key --to-console` command). Then, add this public key and its corresponding private key to the signature provider. Ensure that this key is not linked to your account keys and should be used exclusively for the regproducer action: `signature-provider = YOUR_PUB_KEY_HERE=KEY:YOUR_PRIV_KEY_HERE` 
   - if BP: comment out `eos-vm-oc-enable` and `eos-vm-oc-compile-threads` (EOSVM OC is not to be used on a block signing node)
   - set CPU governor to performance, first check current CPU governor by using this command `cpufreq-info` and then set to performance `sudo cpufreq-set -r -g performance`
   - use this command to watch current CPU clock speed `watch -n 0.4 "grep -E '^cpu MHz' /proc/cpuinfo"`
     
-- Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/alvosec/urxr13">msig</a> (login with WebAuth or use cleos).
+  - Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/testalvosec/vveaah">msig</a> (login with WebAuth or use cleos).
 
-- To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
+  - To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
   ```
   cleos system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
