@@ -90,7 +90,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
     
   - Before you register on Testnet you will need to get permission for `regprod`, you can copy this <a target="_blank" href="https://testnet.explorer.xprnetwork.org/msig/testalvosec/vveaah">msig</a> (login with WebAuth or use cleos).
 
-  - To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112) :
+  - To register as Block Producer, run command and visit the testnet telegram channel [above](https://t.me/XPRNetwork/935112):
   ```
   cleos system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
