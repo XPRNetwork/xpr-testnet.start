@@ -75,10 +75,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 
 -  to create an account on XPR Network test network go to <a target="_blank" href="https://testnet.webauth.com/">testnet.webauth.com</a> create your account, use 000000 for the email activation code. You can get your private key by going to settings > backup private key.
 -  There is also an option to create account by using <a target="_blank" href="https://testnet.explorer.xprnetwork.org/wallet/create-account/advanced">Testnet Explorer</a>, only that here you will need to pay for ram fee (6.66 XPR).
-  
-  also you can create key pair using cleos command `cleos create key`  
-
-- If non BP node: use the same config, just comment out rows with producer-name and signature-provider  
+- If non BP node: use the same config, just comment out rows with `producer-name` and `signature-provider` 
   
 - Edit config.ini:  
   - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:9876`  
@@ -98,7 +95,7 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
   ```
   cleos system regproducer YOU_ACCOUNT PUBKEY "URL" LOCATION -p YOU_ACCOUNT
   ```
-  In this step, please provide your registered BP account, the public key you've included in the signature provider, and specify the location using the ISO code for your country. You can find the ISO code for your country [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
+  In this step, please provide your registered BP account, the public key you've included in the `signature-provider`, and specify the location using the ISO code for your country. You can find the ISO code for your country [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
 - Open TCP Ports (8888, 9876) on your firewall/router  
 
