@@ -8,7 +8,6 @@ Testnet Explorer: https://testnet.explorer.xprnetwork.org/
 
 P2P endpoints:
 ```
-p2p-peer-address = testnet.xprnetwork.org:9876
 p2p-peer-address = tn1.protonnz.com:9876
 p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
 p2p-peer-address = testnet.proton.eosdetroit.io:1337
