@@ -1,24 +1,9 @@
 # Welcome to the XPR Network Testnet [Validator Node Installation]
 
 Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
-Based on tag: v4.0.4
 
 Please join our [XPR Network Testnet Telegram channel](https://t.me/XPRNetwork/935112)
 Testnet Explorer: https://testnet.explorer.xprnetwork.org/
-
-P2P endpoints:
-```
-p2p-peer-address = tn1.protonnz.com:9876
-p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
-p2p-peer-address = testnet.proton.eosdetroit.io:1337
-p2p-peer-address = proton-bp.dmail.co:7676
-p2p-peer-address = test.proton.eosusa.news:19889
-p2p-peer-address = protonp2p-testnet.eoscafeblock.com:9130
-p2p-peer-address = proton-testnet.edenia.cloud:9878
-p2p-peer-address = testnet-p2p.alvosec.com:9878
-p2p-peer-address = p2p-protontest.saltant.io:9879
-p2p-peer-address = protontest.eu.eosamsterdam.net:9905
-```
 
 This repo is for binary installation!
 
@@ -29,43 +14,48 @@ To start a XPR Network node you need install Leap software. You can compile from
 ## Important Update
 
 > [!IMPORTANT] 
-> XPR Network Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (4.0.4) by 30 October 2023. This update is required to ensure the stability of the XPR Network TestNet.
+> XPR Network Consortium is requesting all Block Producers to update their nodes to the latest version of Leap (5.0.3). This update is required to ensure the stability of the XPR Network TestNet.
 
 Please contact us on Telegram if you have any questions: [https://t.me/XPRNetwork/935112](https://t.me/XPRNetwork/935112)
 
 
 ---------------------------------------------------  
 
-Make sure you have Ubuntu 22.04 installed. (Check OS version by using this command `lsb_release -a`)
+Make sure you have Ubuntu 22.04 or later installed. (Check OS version by using this command `lsb_release -a`)
 
 # 1. Installing from precompiled binaries
 
 A. Download the latest version of Antelope Leap for your OS from:
-[https://github.com/AntelopeIO/leap/releases/tag/v4.0.4
-](https://github.com/AntelopeIO/leap/releases/tag/v4.0.4)
-
-For example, for Ubuntu 22.04 you need to download deb leap_4.0.4-ubuntu22.04_amd64.deb, note that Ubuntu 18.04 will not be any more supported in Leap.
+[https://github.com/AntelopeIO/leap/releases/latest
+](https://github.com/AntelopeIO/leap/releases/latest)
 
 To install it you can use apt, but before that download it using wget command:
 ```
-wget https://github.com/AntelopeIO/leap/releases/download/v4.0.4/leap_4.0.4-ubuntu22.04_amd64.deb && apt install ./leap_4.0.4-ubuntu22.04_amd64.deb
+wget $(curl -s https://api.github.com/repos/AntelopeIO/leap/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep -E "leap_.*_amd64\.deb$")
+```
+Once the package is downloaded, install it using the command:
+```
+sudo apt install ./$(ls | grep -E "leap_.*_amd64\.deb$")
 ```
 It will download all dependencies and install Leap. 
 
 ---------------------------------------------------------  
 # 2. Update software to new version  
 
-If upgrading from old 2.X or 3.X versions please see this important guide 
-https://eosnetwork.com/blog/leap-3-1-upgrade-guide/
-
-```
-apt install ./leap_4.0.4-ubuntu22.04_amd64.deb 
-```
+When upgrading from older versions of 2.X, 3.X or 4.X, simply use the commands above having previously stopped your nodes.
 
 ------------------------------------------------------------------  
 
 # 3. Install XPR Network Testnet node [manual]  
-    
+
+> [!IMPORTANT] 
+> ⚠️ **Critical information**: NEVER open access to a server with producer type node (where `eosio::producer_plugin` is active) from outside! 
+If you want to get access for some service tasks - use a firewall `sudo ufw status` configured on this server, having previously opened the necessary ports only for certain IP addresses from which you will connect for service work.
+If firewall is not installed, install it:
+`sudo apt update`
+`sudo apt install ufw`
+As an example, open SSH (port 22) for the IP address (192.168.1.100 - replace it with your own!) from which the administrator will connect for maintenance `sudo ufw allow from 192.168.1.100 to any port 22` Then activate the firewall `sudo ufw enable`
+
 ```
 mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/XPRNetwork/xpr-testnet.start.git ./
 ```
@@ -77,8 +67,11 @@ mkdir -p /opt/XPRTestNet && cd /opt/XPRTestNet && git clone https://github.com/X
 - If non BP node: use the same config, just comment out rows with `producer-name` and `signature-provider` 
   
 - Edit config.ini:  
-  - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:9876`  
-  - replace p2p-peer-address list from above in P2P list  
+  - server address: `p2p-server-address = EXTERNAL_IP_ADDRESS:OPENED_PORT`
+  - > ⚠️ **IMPORTANT!** Please pay attention!
+In order for your node to synchronize successfully and fastest with the blockchain, you need P2P nodes sorted by latency relative to your server, for this purpose use the [get_p2p_nodes.sh](xprNode/get_p2p_nodes.sh) script by making it executable `chmod +x /opt/XPRTestNet/xprNode/get_p2p_nodes.sh` then run it `opt/XPRTestNet/xprNode/get_p2p_nodes.sh`.
+
+  - > After that, a file `available_nodes.txt` will be created in the `/opt/XPRTestNet/xprNode` folder, in it you will find a sorted list of active p2p nodes that you need to copy to the `/opt/XPRTestNet/xprNode/config.ini` file after removing `p2p-peer-address = ...` lines if exist.
   - Check chain-state-db-size-mb value in config, it should be not bigger than you have RAM: `chain-state-db-size-mb = 16384`
 
   - if BP: your producer name: `producer-name = YOUR_BP_NAME`
@@ -220,6 +213,7 @@ cleos get account <account-name>
   
 ### Snapshot:
   * [Snapshots](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
+  * [Snapshots with Full State History](https://snapshots.saltant.io/testnet/)
 
 
 
