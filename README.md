@@ -208,12 +208,66 @@ cleos get account <account-name>
 ```
 
 # 6. Usefull Links
-    
+
   * [WebAuth TestNet](https://testnet.webauth.com/)
   * [Metal X TestNet](https://testnet.app.metalx.com/swap)
   * [XPR Explorer TestNet](https://testnet.explorer.xprnetwork.org/)
   * [XPR Resources TestNet](https://testnet.resources.xprnetwork.org/faucet)
   * [Metal X Lending TestNet](https://testnet.lending.metalx.com/)
+
+## XPR Network TESTNET P2P (Verified January 2026)
+
+```
+p2p-protontest.saltant.io:9879
+testnet-p2p.alvosec.com:9878
+proton-seed-testnet.eosiomadrid.io:9877
+proton.testnet.protonuk.io:9876
+p2p.testnet.totalproton.tech:9842
+testnet.brotonbp.com:9877
+p2p-xpr-test.danemarkbp.com:9876
+tn1.protonnz.com:9876
+xpr-testnet-p2p.bloxprod.io:9875
+peer-xprtest.blocksforge.com:9876
+test.proton.p2p.eosusa.io:19879
+p2p.proton-testnet.genereos.io:9876
+protontest.eu.eosamsterdam.net:9905
+testnet-p2p.xprcore.com:9876
+p2p-testnet.chaininfra.net:9876
+testnet-p2p.xprdata.org:19876
+proton-testnet.cryptolions.io:9874
+testnet-p2p.cerebro.host:9876
+testchain.simpleblock.org:9876
+p2p-testnet.artwebin.com:19876
+testnet-p2p.xprlabs.org:9870
+tn1.cats.vote:9876
+peer-protontest.nodeone.network:9871
+testnet.proton.eosrio.io:58142
+p2p-proton-testnet.cryptotribe.io:9877
+p2p-test.turtlebp.online:19878
+testxpr-p2p.cindro.net:9874
+p2p-testnet-proton.eosarabia.net:9876
+testnet-p2p.luminaryvisn.com:9876
+p2p-xpr-testnet.a-dex.xyz:9876
+proton-p2p-testnet.neftyblocks.com:19876
+testnet.rockerone.io:9876
+```
+
+## XPR Network TESTNET API
+
+```
+https://proton-testnet.eosusa.io
+https://test.proton.eosusa.io
+https://testnet-api.alvosec.com
+https://proton-testnet.cryptolions.io
+https://testnet.protonuk.io
+https://testnet.brotonbp.com
+https://testnet-api.xprcore.com
+https://testnet.proton.genereos.io
+https://protontest.eu.eosamsterdam.net
+https://api-xprnetwork-test.saltant.io
+https://testnet-api.xprdata.org
+https://testnet.rockerone.io
+```
 
 # Backups
   
