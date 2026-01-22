@@ -1,0 +1,38 @@
+# XPR Network Testnet P2P Peers
+# Last verified: 2026-01-23
+# Copy these lines to your config.ini
+
+# Active Testnet P2P Peers (all verified active)
+p2p-peer-address = p2p-protontest.saltant.io:9879
+p2p-peer-address = testnet-p2p.alvosec.com:9878
+p2p-peer-address = proton-seed-testnet.eosiomadrid.io:9877
+p2p-peer-address = proton.testnet.protonuk.io:9876
+p2p-peer-address = p2p.testnet.totalproton.tech:9842
+p2p-peer-address = testnet.brotonbp.com:9877
+p2p-peer-address = p2p-xpr-test.danemarkbp.com:9876
+p2p-peer-address = tn1.protonnz.com:9876
+p2p-peer-address = bpt-p2p.storex.io:9999
+p2p-peer-address = xpr-testnet-p2p.bloxprod.io:9875
+p2p-peer-address = peer-xprtest.blocksforge.com:9876
+p2p-peer-address = test.proton.p2p.eosusa.io:19879
+p2p-peer-address = p2p.proton-testnet.genereos.io:9876
+p2p-peer-address = protontest.eu.eosamsterdam.net:9905
+p2p-peer-address = testnet-p2p.xprcore.com:9876
+p2p-peer-address = p2p-testnet.chaininfra.net:9876
+p2p-peer-address = testnet-p2p.xprdata.org:19876
+p2p-peer-address = proton-testnet.cryptolions.io:9874
+p2p-peer-address = testnet-p2p.cerebro.host:9876
+p2p-peer-address = testchain.simpleblock.org:9876
+p2p-peer-address = p2p-testnet.artwebin.com:19876
+p2p-peer-address = testnet-p2p.xprlabs.org:9870
+p2p-peer-address = tn1.cats.vote:9876
+p2p-peer-address = peer-protontest.nodeone.network:9871
+p2p-peer-address = testnet.proton.eosrio.io:58142
+p2p-peer-address = p2p-proton-testnet.cryptotribe.io:9877
+p2p-peer-address = p2p-test.turtlebp.online:19878
+p2p-peer-address = testxpr-p2p.cindro.net:9874
+p2p-peer-address = p2p-testnet-proton.eosarabia.net:9876
+p2p-peer-address = testnet-p2p.luminaryvisn.com:9876
+p2p-peer-address = p2p-xpr-testnet.a-dex.xyz:9876
+p2p-peer-address = proton-p2p-testnet.neftyblocks.com:19876
+p2p-peer-address = testnet.rockerone.io:9876
