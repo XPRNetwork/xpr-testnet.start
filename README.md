@@ -149,10 +149,16 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 ==============================================================================================  
 
 # 4. Restore/Start from Snapshots
-   Download latest snapshot from http://backup.cryptolions.io/ProtonTestNet/snapshots/ to snapshots folder in your **NODE** directory
-   ```
-   cd /opt/XPRTestNet/xprNode/snapshots/ && wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
-   ```
+   Download the latest snapshot from one of these sites into to snapshots folder in your **NODE** directory:
+   - https://snapshots.bloxprod.io/testnet/
+     ```
+     cd /opt/XPRTestNet/xprNode/snapshots/ && wget https://snapshots.bloxprod.io/testnet/latest-snapshot.bin
+     ```
+     or
+   - http://backup.cryptolions.io/ProtonTestNet/snapshots/
+     ```
+       cd /opt/XPRTestNet/xprNode/snapshots/ && wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
+     ```
    after it downloaded you need to unzip, first install zstd package `sudo apt install zstd`
 
    unzip file with `unzstd latest-snapshot.bin.zst`
@@ -212,8 +218,9 @@ cleos get account <account-name>
 # Backups
   
 ### Snapshot:
-  * [Snapshots](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
-  * [Snapshots with Full State History](https://snapshots.saltant.io/testnet/)
+  * [Snapshots / BP Cryptolions](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
+  * [Full State History Snapshots / BP Saltant](https://snapshots.saltant.io/testnet/)
+  * [Snapshots & Full State History Snapshots / BP Bloxprod](https://snapshots.bloxprod.io/testnet/)
 
 
 
