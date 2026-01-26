@@ -267,6 +267,7 @@ https://protontest.eu.eosamsterdam.net
 https://api-xprnetwork-test.saltant.io
 https://testnet-api.xprdata.org
 https://testnet.rockerone.io
+https://tn1.protonnz.com
 ```
 
 # Backups
@@ -275,6 +276,7 @@ https://testnet.rockerone.io
   * [Snapshots / BP Cryptolions](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
   * [Full State History Snapshots / BP Saltant](https://snapshots.saltant.io/testnet/)
   * [Snapshots & Full State History Snapshots / BP Bloxprod](https://snapshots.bloxprod.io/testnet/)
+  * [Snapshots / BP ProtonNZ](https://tn1.protonnz.com/snapshots/)
 
 
 
