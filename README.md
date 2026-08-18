@@ -158,6 +158,9 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    After the download completes, run the `start.sh` script with the `--snapshot` option and the snapshot file path.
    ```
    cd /opt/XPRTestNet/xprNode
+   ```
+   before starting from snapshot make sure to delete /blocks and /state folders
+   ```
    rm -rf blocks/*
    rm -rf state/*
    ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
