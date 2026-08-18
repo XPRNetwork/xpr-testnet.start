@@ -168,7 +168,7 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    ```
 
    run the `start.sh` script with the `--snapshot` option and the snapshot file path
-    ```
+   ```
    ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
    ```
 
