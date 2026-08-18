@@ -155,14 +155,20 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
    cd /opt/XPRTestNet/xprNode/snapshots/
    wget https://snapshots.bloxprod.io/testnet/latest-snapshot.bin
    ```
+   
    After the download completes, run the `start.sh` script with the `--snapshot` option and the snapshot file path.
    ```
    cd /opt/XPRTestNet/xprNode
    ```
+
    before starting from snapshot make sure to delete /blocks and /state folders
    ```
    rm -rf blocks/*
    rm -rf state/*
+   ```
+
+   run the `start.sh` script with the `--snapshot` option and the snapshot file path
+    ```
    ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
    ```
 
