@@ -149,29 +149,18 @@ Check if you can access you node using link http://you_server:8888/v1/chain/get_
 ==============================================================================================  
 
 # 4. Restore/Start from Snapshots
-   Download the latest snapshot from one of these sites into to snapshots folder in your **NODE** directory:
-   - https://snapshots.bloxprod.io/testnet/
-     ```
-     cd /opt/XPRTestNet/xprNode/snapshots/ && wget https://snapshots.bloxprod.io/testnet/latest-snapshot.bin
-     ```
-     or
-   - http://backup.cryptolions.io/ProtonTestNet/snapshots/
-     ```
-       cd /opt/XPRTestNet/xprNode/snapshots/ && wget http://backup.cryptolions.io/ProtonTestNet/snapshots/latest-snapshot.bin.zst
-     ```
-   after it downloaded you need to unzip, first install zstd package `sudo apt install zstd`
-
-   unzip file with `unzstd latest-snapshot.bin.zst`
-
-   before starting from snapshot make sure to delete /blocks and /state folders
-    
-    rm ./blocks/*
-    rm ./state/*
-    
-   then `start.sh` script with option `--snapshot` and snapshot file path (check where you downloaded snapshot)
-   
+   Download the latest snapshot from https://snapshots.bloxprod.io/testnet/ to the snapshots folder in your **NODE** directory.
    ```
-   cd /opt/XPRTestNet/xprNode && ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
+   mkdir /opt/XPRTestNet/xprNode/snapshots
+   cd /opt/XPRTestNet/xprNode/snapshots/
+   wget https://snapshots.bloxprod.io/testnet/latest-snapshot.bin
+   ```
+   After the download completes, run the `start.sh` script with the `--snapshot` option and the snapshot file path.
+   ```
+   cd /opt/XPRTestNet/xprNode
+   rm -rf blocks/*
+   rm -rf state/*
+   ./start.sh --snapshot /opt/XPRTestNet/xprNode/snapshots/latest-snapshot.bin
    ```
 
 
@@ -273,7 +262,6 @@ https://tn1.protonnz.com
 # Backups
   
 ### Snapshot:
-  * [Snapshots / BP Cryptolions](https://backup.cryptolions.io/ProtonTestNet/snapshots/)
   * [Full State History Snapshots / BP Saltant](https://snapshots.saltant.io/testnet/)
   * [Snapshots & Full State History Snapshots / BP Bloxprod](https://snapshots.bloxprod.io/testnet/)
   * [Snapshots / BP ProtonNZ](https://tn1.protonnz.com/snapshots/)
