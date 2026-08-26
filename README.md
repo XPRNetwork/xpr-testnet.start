@@ -10,7 +10,7 @@ Testnet Explorer: https://testnet.explorer.xprnetwork.org/
 This repository may be used to operate a general Testnet node. However, **you must not attempt to join Testnet as a Block Producer, request `regprod` permission, register as a producer, or request BP onboarding support until you have completed the following mandatory eligibility steps:**
 
 1. Read [How to Become a Block Producer on the XPR Network](https://xprnetwork.org/blog/how-to-become-a-block-producer-on-the-xpr-network) in full.
-2. Pass the XPR Network Consortium's manual Know Your Business (KYB) review and required KYC verification. This is required **before any BP Testnet access is granted**.
+2. Pass the XPR Network Consortium's manual Know Your Business (KYB) review and required KYC verification. Every BP must operate through a legally registered business form recognised in its home jurisdiction. This may include a company, partnership, limited-liability entity, or registered sole proprietor / Private Entrepreneur. The Consortium verifies the business registration, applicable tax/business registration or equivalent official identifier, the person authorised to bind the business, ultimate beneficial ownership, and operational control. This is required **before any BP Testnet access is granted**.
 3. After KYB/KYC approval, pass the XPR Network Operator Competency Assessment.
 
 Only applicants that have passed these pre-Testnet requirements may proceed with BP Testnet onboarding. Completion of the Testnet period does not guarantee Mainnet approval.
