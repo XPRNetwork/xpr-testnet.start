@@ -5,6 +5,16 @@ Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Please join our [XPR Network Testnet Telegram channel](https://t.me/XPRNetwork/935112)
 Testnet Explorer: https://testnet.explorer.xprnetwork.org/
 
+## Block Producer eligibility — complete this before Testnet
+
+This repository may be used to operate a general Testnet node. However, **you must not attempt to join Testnet as a Block Producer, request `regprod` permission, register as a producer, or request BP onboarding support until you have completed the following mandatory eligibility steps:**
+
+1. Read [How to Become a Block Producer on the XPR Network](https://xprnetwork.org/blog/how-to-become-a-block-producer-on-the-xpr-network) in full.
+2. Pass the XPR Network Consortium's manual Know Your Business (KYB) review and required KYC verification. This is required **before any BP Testnet access is granted**.
+3. After KYB/KYC approval, pass the XPR Network Operator Competency Assessment.
+
+Only applicants that have passed these pre-Testnet requirements may proceed with BP Testnet onboarding. Completion of the Testnet period does not guarantee Mainnet approval.
+
 This repo is for binary installation!
 
 **XPR Network is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
