@@ -5,6 +5,37 @@ Chain ID: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 Please join our [XPR Network Testnet Telegram channel](https://t.me/XPRNetwork/935112)
 Testnet Explorer: https://testnet.explorer.xprnetwork.org/
 
+## Temporary Pause on New Block Producer Submissions
+
+XPR Network is temporarily pausing new Block Producer submissions while the network completes its transition to PulseVM.
+
+This is a precautionary measure to protect network stability during a critical protocol upgrade. The transition will be handled by established Block Producers with demonstrated production, upgrade, monitoring, recovery, and incident-response experience.
+
+During the pause:
+
+- No new BP Testnet or Mainnet onboarding applications will be accepted.
+- No new `regprod` permissions will be issued for BP candidates.
+- Existing active Block Producers and non-BP Testnet node operators are unaffected.
+- Current applicants will be contacted directly regarding their status.
+
+The Consortium will use this period to complete the PulseVM transition and finalise strengthened BP admission standards covering manual KYB/KYC, sanctions screening, technical competency, operational accountability, and ecosystem contribution.
+
+New BP submissions will reopen once PulseVM is deployed, stable, and the XPR Network Consortium has formally approved the reopening of onboarding.
+
+Thank you for your understanding and for supporting a secure, reliable XPR Network.
+
+## Block Producer eligibility — complete this before Testnet
+
+This repository may be used to operate a general Testnet node. However, **you must not attempt to join Testnet as a Block Producer, request `regprod` permission, register as a producer, or request BP onboarding support until you have completed the following mandatory eligibility steps:**
+
+1. Read [How to Become a Block Producer on the XPR Network](https://xprnetwork.org/blog/how-to-become-a-block-producer-on-the-xpr-network) in full.
+2. Complete required KYC verification. Applicants operating as or through a business must also pass the XPR Network Consortium's manual Know Your Business (KYB) review. A legally registered business is preferred but not required: individuals and sole traders may apply if they can be properly verified by KYC, demonstrate a verifiable online professional presence and operational control, and show proven IT experience operating servers. Business applicants must provide their business registration or equivalent official identifier, the person authorised to bind the business, ultimate beneficial ownership, and operational control information. This is required **before any BP Testnet access is granted**.
+3. After KYC and, where applicable, KYB approval, pass the XPR Network Operator Competency Assessment.
+
+All BP applicants must read and sign the [XPR Network BP Code of Conduct v1.0](https://github.com/XPRNetwork/xpr.start/blob/master/XPR%20Network%20BP%20Code%20of%20Conduct%20v1.0.pdf).
+
+Only applicants that have passed these pre-Testnet requirements may proceed with BP Testnet onboarding. Completion of the Testnet period does not guarantee Mainnet approval.
+
 This repo is for binary installation!
 
 **XPR Network is a protocol built on top of the Antelope (EOSIO) consensus layer that allows verified user identity and applications to generate signature requests (transactions) that can be pushed to signers (wallets) for authentication and signature creation. These signature requests can be used today to authenticate and sign cryptographic payments. The same architecture will be used in future version to initiate and track pending fiat transactions**
