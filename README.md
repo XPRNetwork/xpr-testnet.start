@@ -32,6 +32,8 @@ This repository may be used to operate a general Testnet node. However, **you mu
 2. Complete required KYC verification. Applicants operating as or through a business must also pass the XPR Network Consortium's manual Know Your Business (KYB) review. A legally registered business is preferred but not required: individuals and sole traders may apply if they can be properly verified by KYC, demonstrate a verifiable online professional presence and operational control, and show proven IT experience operating servers. Business applicants must provide business registration, applicable tax/business registration or equivalent official identifier, the person authorised to bind the business, ultimate beneficial ownership, and operational control information. This is required **before any BP Testnet access is granted**.
 3. After KYC and, where applicable, KYB approval, pass the XPR Network Operator Competency Assessment.
 
+All BP applicants must read and sign the [XPR Network BP Code of Conduct v1.0](https://github.com/XPRNetwork/xpr.start/blob/master/XPR%20Network%20BP%20Code%20of%20Conduct%20v1.0.pdf).
+
 Only applicants that have passed these pre-Testnet requirements may proceed with BP Testnet onboarding. Completion of the Testnet period does not guarantee Mainnet approval.
 
 This repo is for binary installation!
